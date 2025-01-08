@@ -1,4 +1,4 @@
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include <iostream>
 
 const int SAMPLE_RATE = 44100;
@@ -16,7 +16,7 @@ oscillator oscillate(float rate, float volume)
     oscillator o = {
         .current_step = 0,
         .volume = volume,
-        .step_size = (2 * M_PI) / rate,
+        .step_size = (float)(2 * M_PI) / rate,
     };
     return o;
 }
