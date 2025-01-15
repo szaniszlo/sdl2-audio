@@ -33,13 +33,13 @@ oscillator A2_oscillator = oscillate(A2_freq, 0.8f);
 float A3_freq = (float)SAMPLE_RATE / 220.00f;
 oscillator A3_oscillator = oscillate(A3_freq, 0.8f);
 
-float E4_freq = (float)SAMPLE_RATE / 329.63;
+float E4_freq = (float)SAMPLE_RATE / 330.00f; // pythagorean 5th ( * 3/2 )
 oscillator E4_oscillator = oscillate(E4_freq, 0.8f);
 
 float A4_freq = (float)SAMPLE_RATE / 440.00f;
 oscillator A4_oscillator = oscillate(A4_freq, 0.8f);
 
-float C5_freq = (float)SAMPLE_RATE / 523.25;
+float C5_freq = (float)SAMPLE_RATE / (440.00f * 81 / 64); // pyhtagorean 3rd
 oscillator C5_oscillator = oscillate(C5_freq, 0.8f);
 
 void oscillator_callback(void *userdata, Uint8 *stream, int len)
